@@ -1,0 +1,37 @@
+<h1>
+  Titulo que se encuentra dentro de la clase typescript {{ titulo }}!
+</h1>
+
+
+
+<div class="container">
+
+  <div class="row">
+    <div class="col-6">
+      <div class="form-group">
+        <label for="usr">Nombre:</label>
+        <input type="text" [(ngModel)]="datos.Nombre" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="usr">Apellido:</label>
+        <input type="text" [(ngModel)]="datos.Apellido" class="form-control">
+        </div>
+      <div class="form-group">
+        <label for="usr">Edad:</label>
+        <input type="text" [(ngModel)]="datos.Edad" class="form-control">
+      </div>
+      <div class="form-group">
+          <label for="usr">Documento:</label>
+          <input type="text" [(ngModel)]="datos.Documento" class="form-control">
+      </div>
+
+      <button type="button" (click)="eventButton()" class="btn btn-primary btn-block">Envento angular</button>
+    </div> <!--termina col-6-->
+
+    <div class="col-6">
+        <app-hijo [propiedadhijo]="datos" ></app-hijo>
+    </div>
+
+  </div> <!--termina row-->
+
+</div>
