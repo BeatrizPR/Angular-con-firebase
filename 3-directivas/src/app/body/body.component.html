@@ -1,0 +1,32 @@
+<h1>« La inspiración existe, pero tiene que encontrarte trabajando. »</h1>
+<h5>Pablo Picasso</h5>
+
+<div class="row">
+  <div class="col-10"></div>
+  <div class="col-2">
+    <div class="form-group">
+      <label for="category">Categoría</label>
+      <select class="form-group" id="selectorArt" (change)="eventControl($event)">
+        <option *ngFor="let object of categories" value="{{object.code}}">{{object.text}}</option> 
+      </select>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+      <div *ngFor="let a of art">
+        <div class="row">
+          <div class="col-4">
+            <img style="width:300px" src="{{a.image}}">
+          </div>
+          <div class="col-8">
+            <h5>{{a.title}}</h5>
+            <p>{{a.text}}</p>
+          </div>
+        </div>
+        
+        
+      </div>
+    </div>
+  </div>
